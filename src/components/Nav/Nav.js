@@ -8,7 +8,11 @@ const Nav = ({ handleButtonClick }) => (
       <div className="navbar-left">
         <i className="fas fa-bars"></i>
         {/* <div className="logo" alt="" /> */}
-        <i className="fab fa-youtube"><span></span></i>
+        <div className="logos">
+          <i className="fab fa-youtube"></i>
+          <div className="logo">Premium</div>
+          <div className="small-logo">KR</div>
+        </div>
       </div>
       <Search handleButtonClick={handleButtonClick} />
       <div className="nav-icons">

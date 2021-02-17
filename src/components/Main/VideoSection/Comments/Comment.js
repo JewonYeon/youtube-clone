@@ -15,14 +15,14 @@ class Comment extends Component {
                 { username: '강아지', text: '멍멍' },
             ]
         }
-        this.handleThumbsUpComment = this.handleThumbsUpComment.bind(this);
+        // this.handleThumbsUpComment = this.handleThumbsUpComment.bind(this);
         this.handleThumbsDownComment = this.handleThumbsDownComment.bind(this);
         this.handleShow = this.handleShow.bind(this);
     }
 
-    handleThumbsUpComment() {
-        this.setState(({ thumbsUpComment }) => ({ thumbsUpComment: thumbsUpComment + 1 }))
-    }
+    // handleThumbsUpComment() {
+    //     this.setState(({ thumbsUpComment }) => ({ thumbsUpComment: thumbsUpComment + 1 }))
+    // }
 
     handleThumbsDownComment() {
         this.setState(({ thumbsDownComment }) => ({ thumbsDownComment: thumbsDownComment + 1 }))
@@ -45,7 +45,7 @@ class Comment extends Component {
                         <i className="fas fa-thumbs-up"></i>
                     </button>
                     <div>{this.props.list.like}</div>
-                    <button onClick={this.handleThumbsDownComment}>
+                    <button onClick={() => this.props.unlikeBtn(this.props.index)}>
                         <i className="fas fa-thumbs-down"></i>
                     </button>
                     <div>{this.props.list.unlike}</div>
