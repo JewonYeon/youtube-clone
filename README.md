@@ -1,1 +1,1 @@
-## Recast.ly AJAX
+## only react
